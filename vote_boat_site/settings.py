@@ -27,6 +27,23 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 
+# List of callables that know how to import templates from various sources.
+
+TEMPLATE_LOADERS = (
+    ('django.template.loaders.cached.Loader', (
+        'django.template.loaders.filesystem.Loader',
+        'django.template.loaders.app_directories.Loader',
+    )),
+)
+
+TEMPLATE_DIRS = (
+    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    os.path.join(BASE_DIR,'vote_boat_site/templates'),
+)
+
+
 # Application definition
 
 INSTALLED_APPS = (
@@ -36,6 +53,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 'django_vote_boat'
 )
 
 MIDDLEWARE_CLASSES = (
