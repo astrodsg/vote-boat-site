@@ -53,7 +53,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'django_vote_boat'
+    'vote_boat'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -72,11 +72,17 @@ WSGI_APPLICATION = 'vote_boat_site.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
+DATABASE_DIR = os.path.join(BASE_DIR,"databases")
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(DATABASE_DIR, 'db.sqlite3'),
+    },
+
+    'vote_boat': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(DATABASE_DIR, 'db.sqlite3'),
     }
 }
 
