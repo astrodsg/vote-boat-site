@@ -77,12 +77,11 @@ DATABASE_DIR = os.path.join(BASE_DIR,"databases")
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(DATABASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'default_db.sqlite3'),
     },
-
     'vote_boat': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(DATABASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'vote_boat_db.sqlite3'),
     }
 }
 
