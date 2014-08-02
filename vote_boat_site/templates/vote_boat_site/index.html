@@ -1,13 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <!-- add the location -->
-    <title>Vote Boat</title>
-  </head>
+{% extends "vote_boat_site/base.html" %}
 
-  <body>
-    <!-- add the location -->
-    <h1>Welcome to... the Vote Boat</h1>
-    <img src="http://cdn.americansongwriter.com/wp-content/uploads/2009/08/Row-boat-P7170006-300x225.jpg"/>
-  </body>
-</html>
+{% block title %}
+Vote Boat
+{% endblock %}
+
+{% block content %}
+<h1>Welcome to... the Vote Boat</h1>
+<p>
+    Go ahead and scroll down, watch how the menu bar stays. Also shrink the window
+    and see how the menu bar is responsive :)
+</p> 
+<br/>
+<img src="http://cdn.americansongwriter.com/wp-content/uploads/2009/08/Row-boat-P7170006-300x225.jpg"/>
+<br/>
+<img src="http://static.giantbomb.com/uploads/original/0/4530/396796-boat.jpg"/>
+<br/>
+{% endblock %}

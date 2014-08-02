@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+{% load staticfiles %}
+<html lang="en">
+<!-- ============================== HEAD =================================== -->
+    <head>
+        <title>
+            {% block title %}Vote Boat{% endblock %}
+        </title>
+<!--         <link rel="stylesheet" type="text/css" href='{% static "css/base.css" %}' />         
+TODO: how to put many style sheets organized into one base.css 
+maybe use @import
+
+-->
+        
+
+        <link rel="stylesheet" type="text/css" href='{% static "css/icons.css" %}' />        
+        <link rel="stylesheet" type="text/css" href='{% static "css/stylesheet.css" %}' />        
+        <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+<!-- ============================== BODY =================================== -->
+    <body>
+        <!-- - - - - - - - - - -  navigation toolbar - - - - - - - - - - - - -->
+        <header>
+            <a href="#" id="logo">
+            </a>
+            <nav>
+                <a href="#" id="menu-icon"></a>
+                <ul>
+                    <li><a href="http://127.0.0.1:8000" class="current">Home</a></li>
+                    <li><a href="http://127.0.0.1:8000/admin/">Admin</a></li>
+                    <li><a href="https://www.djangoproject.com/">Django</a></li>
+                    <li><a href="https://www.python.org/">Python</a></li>
+                    <li><a href="http://astrodsg.github.io/">Dylan</a></li>
+                    <li><a href="http://bkimmig.github.io/">Brian</a></li>            
+                </ul>
+            </nav>
+        </header>    
+         
+        <!-- - - - - - - - - - -  primary content - - - - - - - - - - - - -->
+        
+        <div id="main-content">        
+            {% block content %}{% endblock %}
+        <div>
+            
+        <!-- - - - - - - - - - -  page footer - - - - - - - - - - - - - - - -->
+        {% block footer %}
+        <hr>
+        <p>Default Footer with icon?</p>
+        <a href="https://github.com/astrodsg" class="icon icon-github"><span>Github</span></a>
+        {% endblock %}
+    </body>
+</html>
+

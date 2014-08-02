@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
@@ -36,11 +35,14 @@ TEMPLATE_LOADERS = (
     )),
 )
 
+PRIMARY_TEMPLATE_DIR = os.path.join(BASE_DIR,'vote_boat_site','templates')
+
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(BASE_DIR,'vote_boat_site/templates'),
+    PRIMARY_TEMPLATE_DIR,
+    os.path.join(PRIMARY_TEMPLATE_DIR,"vote_boat_site"), 
 )
 
 
@@ -53,7 +55,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'vote_boat'
+    'vote_boat',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -68,7 +70,6 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'vote_boat_site.urls'
 
 WSGI_APPLICATION = 'vote_boat_site.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
@@ -103,3 +104,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR,"vote_boat_site","static"),
+    # TODO: include static from vote_boat package
+)
