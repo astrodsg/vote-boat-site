@@ -43,13 +43,13 @@ def populate():
     add_vote(idea2,dylan,1)        
 
     idea3 = add_idea(party_ideas,"poker night")
-    add_vote(idea1,brian,0)
-    add_vote(idea1,tim,1)
-    add_vote(idea1,dan,1)        
-    add_vote(idea1,dylan,1)            
+    add_vote(idea3,brian,0)
+    add_vote(idea3,tim,1)
+    add_vote(idea3,dan,1)        
+    add_vote(idea3,dylan,1)            
 
     idea4 = add_idea(party_ideas,"concert")            
-    add_vote(idea1,brian,1)
+    add_vote(idea4,brian,1)
     
     # Print out what we have added to the user.
     for p in Poll.objects.all():
