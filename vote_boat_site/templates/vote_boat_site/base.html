@@ -11,12 +11,13 @@ TODO: how to put many style sheets organized into one base.css
 maybe use @import
 
 -->
-        
-
+         
         <link rel="stylesheet" type="text/css" href='{% static "css/icons.css" %}' />        
         <link rel="stylesheet" type="text/css" href='{% static "css/stylesheet.css" %}' />        
         <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        {% block styles-plus %}
+        {% endblock %}
     </head>
 <!-- ============================== BODY =================================== -->
     <body>
@@ -41,7 +42,8 @@ maybe use @import
         <!-- - - - - - - - - - -  primary content - - - - - - - - - - - - -->
         
         <div id="main-content">        
-            {% block content %}{% endblock %}
+            {% block content %}
+            {% endblock %}
         <div>
             
         <!-- - - - - - - - - - -  page footer - - - - - - - - - - - - - - - -->
