@@ -43,6 +43,6 @@ pip-delete-this-directory.txt
 # ########################################################################### #
 # project specific
 *.sqlite3
-./vote_boat_site/static/vote_boat
-./vote_boat_site/templates/vote_boat
+/vote_boat_site/static/vote_boat
+/vote_boat_site/templates/vote_boat
 
