@@ -10,9 +10,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-import vote_boat
 
-VOTE_BOAT_DIR = os.abspath(os.path.dirname(vote_boat.__file__)) # /.../django-vote-boat/vote_boat
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 # Quick-start development settings - unsuitable for production
@@ -110,5 +108,5 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR,"vote_boat_site","static"),
-    os.path.join(VOTE_BOAT_DIR,"static"),
+    #os.path.join(VOTE_BOAT_DIR,"static"),
 )
