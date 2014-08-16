@@ -36,6 +36,13 @@ header {
     border-bottom: 4px solid #4C9CF1;
     z-index: 100;
 }
+ 
+footer {
+    background: #fff;
+    border-top: 4px solid #4C9CF1;
+    height: auto;
+}
+
 
 #logo{
     margin-left: 20px;
@@ -51,8 +58,18 @@ nav {
     padding: 20px;    
 }
 
-#main-content {
-    margin-top: 80px;
+article {
+    width: auto;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px; 
+/*     margin-top: 80px; */
+}
+
+section {
+    margin: 80px auto 40px;
+    max-width: 980px;
+    position: relative;
 }
 
 #menu-icon {
@@ -86,12 +103,6 @@ li {
     color: #2262AD;
 }
 
-section {
-    margin: 80px auto 40px;
-    max-width: 980px;
-    position: relative;
-    padding: 20px
-}
 
 /*MEDIA QUERY*/
 @media only screen and (max-width : 640px) { /*If device width is higher than 640px use this css and if less than 640px use above */

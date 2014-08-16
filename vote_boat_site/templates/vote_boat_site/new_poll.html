@@ -10,25 +10,27 @@ Vote Boat : Create Poll
 {% endblock %}
 
 {% block content %}
-<form class="form_vote_boat">
-    <div>
+<article>
+    <form class="form_vote_boat">
+        <div>
     
-        <h1> New Poll </h1>
-        <label>
-            <span>Title</span>{{ poll.title }}
-        </label>
-        <label>
-            <span>Description</span>{{ poll.description }}
-        </label>
-        <label>
-            <span>Username</span>{{ user.username }}
-        </label>
-        <label>
-            <span>Email</span>{{ user.email }}            
-        </label>
-        <input class='button' type="submit" value="Create Poll" />
-    </div>
-</form>
+            <h1 id="new_poll"> New Poll </h1>
+            <label>
+                <span>Title</span>{{ poll.title }}
+            </label>
+            <label>
+                <span>Description</span>{{ poll.description }}
+            </label>
+            <label>
+                <span>Username</span>{{ user.username }}
+            </label>
+            <label>
+                <span>Email</span>{{ user.email }}            
+            </label>
+            <input class='button' type="submit" value="Create Poll" />
+        </div>
+    </form>
+</article>
 {% endblock %}
 
 
