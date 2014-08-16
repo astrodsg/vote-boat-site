@@ -1,11 +1,45 @@
 {% extends "vote_boat_site/base.html" %}
+{% load staticfiles %}
 
 {% block title %}
 Vote Boat : Create Poll
 {% endblock %}
 
-{% block content %}
+{% block styles-plus %}
+<link rel="stylesheet" type="text/css" href='{% static "vote_boat/css/style.css" %}' />
+{% endblock %}
+
+<form class="form_vote_boat">
+    <div>
+    
+        <h1> New Poll </h1>
+    
+        <label>
+        <span>Title</span>{{ poll.title }}
+        </label>
+
+        <label>
+        <span>Description</span>{{ poll.description }}
+        </label>
+            
+        <label>
+        <span>Username</span>{{ user.username }}
+        </label>
+
+        <label>
+        <span>Email</span>{{ user.email }}
+        <input class='button' type="submit" value="Create Poll" />
+        </label>
+
+    </div>
+</form>
+
+
+
+
 <!-- 
+{% block content %}
+<!~~ 
 <styles>
 
     #add-poll-form {
@@ -20,7 +54,7 @@ ul.create-poll {
 }    
     
 </styles>
- -->
+ ~~>
 <h1>Create a new vote poll:</h1>
 <form id="add-poll-form" class="form-vote-boat" method="post" action="/new_poll/">
     {% csrf_token %}
@@ -34,5 +68,6 @@ ul.create-poll {
 </form>
 <br/>
 {% endblock %}
+ -->
 
 
