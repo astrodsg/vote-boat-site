@@ -9,65 +9,29 @@ Vote Boat : Create Poll
 <link rel="stylesheet" type="text/css" href='{% static "vote_boat/css/style.css" %}' />
 {% endblock %}
 
+{% block content %}
 <form class="form_vote_boat">
     <div>
     
         <h1> New Poll </h1>
-    
         <label>
-        <span>Title</span>{{ poll.title }}
+            <span>Title</span>{{ poll.title }}
         </label>
-
         <label>
-        <span>Description</span>{{ poll.description }}
+            <span>Description</span>{{ poll.description }}
         </label>
-            
         <label>
-        <span>Username</span>{{ user.username }}
+            <span>Username</span>{{ user.username }}
         </label>
-
         <label>
-        <span>Email</span>{{ user.email }}
+            <span>Email</span>{{ user.email }}            
+        </label>
         <input class='button' type="submit" value="Create Poll" />
-        </label>
-
     </div>
 </form>
-
-
-
-
-<!-- 
-{% block content %}
-<!~~ 
-<styles>
-
-    #add-poll-form {
-    
-    
-    }
-Hey brian I think to get the list to do the correct thing it needs to be something like:
-
-ul.create-poll {
-    
-
-}    
-    
-</styles>
- ~~>
-<h1>Create a new vote poll:</h1>
-<form id="add-poll-form" class="form-vote-boat" method="post" action="/new_poll/">
-    {% csrf_token %}
-    <ul class="ul.create-poll">
-        <li>Title {{  poll.title }}</li>
-        <li>Description {{  poll.description }}</li>
-        <li>Username {{  user.username }}</li>
-        <li>Email {{  user.email }}</li>        
-    </ul>
-    <input type="submit" name="submit" value="Create Poll" />
-</form>
-<br/>
 {% endblock %}
- -->
+
+
+
 
 
