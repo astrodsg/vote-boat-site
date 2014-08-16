@@ -8,5 +8,6 @@ urlpatterns = patterns('',
     url(r'^$', 'vote_boat_site.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^new_poll/',views.new_poll,name='new_poll')
+    url(r'^create/',views.new_poll,name='create_poll'),
+    url(r'^ideas/(?P<poll_ideas_url>\w+\-\d*)/$', views.ideas, name='ideas'), 
 )
