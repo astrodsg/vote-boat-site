@@ -1,0 +1,38 @@
+{% extends "vote_boat_site/base.html" %}
+
+<!-- TODO: add personal stylesheet -->
+
+{% block title %}
+Vote Boat : Ideas
+{% endblock %}
+
+{% block content %}
+
+<h2>Ideas for {{ poll.title }}<h2>
+<!-- TODO: add interface for the view the poll info -->
+
+<!-- List all the ideas with a vote capability -->
+{% for idea in ideas.visible_fields %}
+    <div id='idea{{ forloop.counter }}' class="idea-container">
+        <ul>
+            <li>Idea {{ idea.title }}</li>
+            <li>Description {{ idea.description }} </li>            
+            <li>Tags</li>
+            <li>Up</li>
+            <li>Down</li>
+            <li>Current Position</li>                
+            <li>number_up_number_down</li>
+            <li>comment</li>            
+        </ul>                        
+    </div>    
+{% endfor %}
+
+<!-- Side bar -->
+<!--    * Poll (title, description, settings) -->
+<!--    * tags -->
+<!--    * add idea (optional) -->
+
+{% endblock %} 
+
+
+

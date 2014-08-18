@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 
-from vote_boat.views import create_new_poll,ideas
+from vote_boat.views import create_new_poll,ideas,poll_urls
 
 def home (request):
     # Request the context of the request.

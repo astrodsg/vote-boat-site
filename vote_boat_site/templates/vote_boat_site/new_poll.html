@@ -11,9 +11,18 @@ Vote Boat : Create Poll
 
 {% block content %}
 <article>
-    <form class="form_vote_boat">
-        <div>
-    
+    <div class="nav-ideas">
+        Create Poll
+        <span class="right-arrow"></span>
+        <a onclick="form.submit();">Add Ideas</a>
+        <!--         TODO: be able to submit by clicking Add Ideas -->
+        <span class="right-arrow"></span>        
+        Poll Settings
+        <span class="right-arrow"></span>
+        Share        
+    </div> 
+    <form id="form_vote_boat" class="form_vote_boat" method="post"> {% csrf_token %}       
+        <div>        
             <h1 id="new_poll"> New Poll </h1>
             <label>
                 <span>Title</span>{{ poll.title }}
@@ -27,7 +36,7 @@ Vote Boat : Create Poll
             <label>
                 <span>Email</span>{{ user.email }}            
             </label>
-            <input class='button' type="submit" value="Create Poll" />
+            <input class='button' type="submit" name="submit" value="Create Poll" />
         </div>
     </form>
 </article>

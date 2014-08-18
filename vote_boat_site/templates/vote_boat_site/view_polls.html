@@ -1,0 +1,15 @@
+<!-- View many different ur polls -->
+{% extends "vote_boat_site/base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+Vote Boat : Polls
+{% endblock %}
+
+{% block content %}
+<article>
+    {% for url in poll_urls %}
+        <p><a href="{{ url }}">{{ url|safe }}</a></p>
+    {% endfor %}
+</article>
+{% endblock %}
